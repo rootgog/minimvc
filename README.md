@@ -38,7 +38,7 @@ MiniMVC can accept two parameters
 | Parameter     | Description                                                                    | Default           |
 | ------------- | ------------------------------------------------------------------------------ | ----------------- |
 | data          | An Object that contains all of the data that is to be syncronised with the DOM | MiniMVC.data = {} |
-| bindAttribute | The attribute that will be used in the HTML to isentify it's data equivelent   | data-             |
+| bindAttribute | The attribute that will be used in the HTML to identify it's data equivelent   | data-bind         |
 
 ## TODO:
 
