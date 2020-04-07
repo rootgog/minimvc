@@ -1,6 +1,6 @@
 # MiniMVC
 
-MiniMVC is a lightweightsolution to bind javascript objects to DOM elements
+MiniMVC is a lightweight solution to bind javascript objects to DOM elements
 
 ## Get Started
 

@@ -26,7 +26,7 @@ export default class MiniMVC {
   }
 
   getPropValue(prop) {
-    this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
+    return this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
   }
   setPropValue(prop, value) {
     this.data[prop] = value;
