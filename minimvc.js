@@ -1,15 +1,15 @@
 export default class MiniMVC {
-  constructor({ bindAttribute = "data-bind", scope = {} } = {}) {
+  constructor({ bindAttribute = "data-bind", data = {} } = {}) {
     this.bindAttribute = bindAttribute;
-    this.scope = scope;
+    this.data = data;
 
     document.querySelectorAll(`[${this.bindAttribute}]`).forEach((element) => {
       element.addEventListener("input", (e) => {
         if (element.contenteditable === "true") {
-          this.scope[element.getAttribute(this.bindAttribute)] =
+          this.data[element.getAttribute(this.bindAttribute)] =
             element.textContent;
         } else {
-          this.scope[element.getAttribute(this.bindAttribute)] = element.value;
+          this.data[element.getAttribute(this.bindAttribute)] = element.value;
         }
       });
       this.initProp(element.getAttribute(this.bindAttribute));
@@ -26,15 +26,15 @@ export default class MiniMVC {
   }
 
   getPropValue(prop) {
-    this.scope.hasOwnProperty(prop) ? this.scope[prop] : undefined;
+    this.data.hasOwnProperty(prop) ? this.data[prop] : undefined;
   }
   setPropValue(prop, value) {
-    this.scope[prop] = value;
+    this.data[prop] = value;
   }
 
   initProp(prop) {
     let value = this.getPropValue(prop);
-    Object.defineProperty(this.scope, prop, {
+    Object.defineProperty(this.data, prop, {
       set: (newVal) => {
         value = newVal;
         this.setElementValue(
