@@ -1,0 +1,11 @@
+{
+  "name": "mvc-light",
+  "version": "1.0.0",
+  "description": "Lightweight mvc for basic data binding between a json object and the DOM",
+  "main": "mvc-light.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "George Bishop",
+  "license": "ISC"
+}

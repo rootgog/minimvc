@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVC Light Demo</title>
+  </head>
+  <body>
+    <h1 data-bind="header">Header</h1>
+    <p data-bind="paragraph">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur rerum
+      consectetur nemo accusantium, quos nisi fuga eius explicabo! Est qui
+      commodi, doloribus fugiat in eveniet iste iure neque voluptatem vel.
+    </p>
+    <p data-bind="website"></p>
+    <form action="#">
+      <input type="email" data-bind="email" />
+      <input type="text" data-bind="text" />
+    </form>
+    <div data-bind="contenteditable" contenteditable="true"></div>
+    <textarea name="ta" id="ta" cols="30" rows="10" data-bind="ta"></textarea>
+  </body>
+  <script type="module" defer>
+    import MVC from "./mvc-light.js";
+
+    let data = {
+      header: "test",
+      email: "dev.georgebishop@gmail.com",
+      website: "https://georgebishop.me",
+      contenteditable: "testing",
+    };
+
+    window.data = data;
+
+    new MVC({ scope: data });
+  </script>
+</html>
