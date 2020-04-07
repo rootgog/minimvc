@@ -1,4 +1,4 @@
-export default class MVCLight {
+export default class MiniMVC {
   constructor({ bindAttribute = "data-bind", scope = {} } = {}) {
     this.bindAttribute = bindAttribute;
     this.scope = scope;
