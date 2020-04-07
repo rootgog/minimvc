@@ -5,7 +5,7 @@ export default class MiniMVC {
 
     document.querySelectorAll(`[${this.bindAttribute}]`).forEach((element) => {
       element.addEventListener("input", (e) => {
-        if (element.contenteditable === "true") {
+        if (element.getAttribute("contenteditable") === "true") {
           this.data[element.getAttribute(this.bindAttribute)] =
             element.textContent;
         } else {

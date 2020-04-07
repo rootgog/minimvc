@@ -1,6 +1,6 @@
 {
   "name": "minimvc",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "description": "Lightweight mvc for basic data binding between a json object and the DOM",
   "main": "minimvc.js",
   "scripts": {
